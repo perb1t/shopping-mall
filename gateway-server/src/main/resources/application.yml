@@ -4,14 +4,16 @@ spring:
 
 server:
   port: 8084
-  servlet:
-    context-path: /gateway
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8081/eureka/eureka/
-
 zuul:
   routes:
-    login-server: /user/**
-    trade-server: /trade/**
+    trade-server:
+      serviceId: trade-server
+      path: /trade/**
+    login-server:
+      serviceId: login-server
+      path: /user/**

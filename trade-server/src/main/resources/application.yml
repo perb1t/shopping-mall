@@ -8,8 +8,6 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 server:
   port: 8083
-  servlet:
-    context-path: /trade
 eureka:
   client:
     service-url:
